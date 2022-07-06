@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![My Solution](./desktop-view-cart.png)
+![My Solution](./screenshots/desktop-view-cart.png)
 
 ### Links
 
@@ -47,9 +47,11 @@ Users should be able to:
 ### What I learned
 
 Honestly, It seemed simpler than expected.. Layout management is very complex too.
+
 ### Useful resources
 
-- No extra resources used for the project apart from [Tailwind Docs](tailwindcss.com/docs/)
+- No extra resources used for the project apart from [Tailwind Docs](http://tailwindcss.com/docs/)
+
 ## Author
 
 - Frontend Mentor - [@astraldev](https://www.frontendmentor.io/profile/astraldev)
