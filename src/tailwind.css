@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind utilities;
-
-@font-face {
-    font-family: 'Kumbh Sans';
-    src: url(/css/font-kumbh-sans/KumbhSans-VariableFont_wght.ttf);
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 * {
     font-family: 'Kumbh Sans', sans-serif;
 }
