@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+
+<body class="lg:px-24 flex flex-col">
+  <nav class="mx-2 md:pt-2 lg:pt-4 border-b relative px-2 items-center flex">
+    <!-- The main navigation div -->
+    <div class="flex">
+      <button class="w-8 h-8 mr-2 grid place-items-center ico ico-menu my-auto md:hidden" onclick="toggleNav();removeClass('#cart', 'active')">
+      </button>
+      <h1 class="text-3xl text-gray-700 font-bold md:pt-2.5 lg:text-4xl md:pb-0 mr-7 py-4">
+        sneakers
+      </h1>
+      <div class="nav-list">
+        <button class="ico ico-close text-gray-500 hover:text-gray-700 h-10 grid place-items-center w-10 mx-3 mt-4 mb-5 md:hidden" onclick="toggleNav()">
+        </button>
+        <ul class="flex flex-col md:flex-row">
+          <li class="nav-list-item">Collections</li>
+          <li class="nav-list-item">Men</li>
+          <li class="nav-list-item">Women</li>
+          <li class="nav-list-item">About</li>
+          <li class="nav-list-item">Contact</li>
+        </ul>
+      </div>
+      <span></span>
+    </div>
+    <div class="mr-2 ml-auto space-x-4 md:space-x-6 flex items-center justify-center">
+      <button class="nav-buttons ico ico-cart text-gray-600 grid place-items-center relative" id="cart-btn"
+        onclick="toggleClass('#cart', 'active')" data-watch="items_in_cart" data-cb="updateCartSpan">
+      </button>
+      <img src="./img/image-avatar.png" class="nav-buttons cursor-pointer"></img>
+    </div>
+    <div id="cart" class="cart bottom-0">
+      <h3 class="px-5 text-gray-500 py-6 font-bold border-b border-gray-400">Cart</h3>
+      <div id="cart-content" class="flex flex-col items-center pb-3 justify-center px-6" data-watch="items_in_cart"
+        data-cb="updateCart">
+        <div class="cart-empty">
+          Your cart is empty
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="content lg:px-10 lg:py-16">
+    <div class="gallery">
+      <div class="main bg-black">
+        <button class="gallery-button left" data-direction="-1">
+          <i class="ico ico-previous"></i>
+        </button>
+        <img src="img/image-product-1.jpg" alt="" tabindex="1" onclick="toggleClass('.light-box', 'active')" id="main-image" data-index="0" class="md:cursor-pointer mx-auto">
+        <button class="gallery-button right" data-direction="1">
+          <i class="ico ico-next"></i>
+        </button>
+      </div>
+      <div class="caurosel-container">
+        <div class="caurosel flex mt-8"></div>
+      </div>
+    </div>
+    <div class="description">
+      <h5 class="font-bold uppercase lg:text-lg">Sneaker Company</h5>
+      <h1 class="font-bold capitalize mt-4 text-4xl lg:text-5xl" id="prod-name">Fall Limited Edition Sneakers</h1>
+      <div class="py-4 text-gray-600 font-sans mr-4">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they'll withstand everything the weather can offer.
+      </div>
+      <div class="flex flex-row pb-5 md:flex-col md:justify-between w-[98%] md:w-auto">
+        <div class="flex items-center justify-start space-x-3">
+          <span class="text-2xl lg:text-3xl font-bold" data-price="125.00">$125.00</span>
+          <span class="discount ">50%</span>
+        </div>
+        <span class="lg:text-2xl text-base text-gray-400 ml-auto md:ml-0 my-1.5 line-through font-bold">
+          $250.00
+        </span>
+      </div>
+      <div class="grid grid-rows-2 gap-y-3 md:gap-x-3 grid-cols-1 pr-2 py-1 md:grid-rows-1 md:grid-cols-5">
+        <div class="prod-amnt md:col-span-2">
+          <button class="grid place-items-center" onclick="cartItem(-1)()">
+            <i class="ico ico-minus"></i>
+          </button>
+          <input type="number" id="cart-item-count" onchange="addToCart(this)" class="appearance-none" min="0" max="10"
+            value="0">
+          <button class="grid place-items-center" onclick="cartItem(1)()">
+            <i class="ico ico-plus"></i>
+          </button>
+        </div>
+        <button class="add-to-cart md:col-span-3 rounded-md" id="add-to-cart" onclick="cartItem(1)()">
+          <div class="flex items-center justify-center space-x-2">
+            <i class="ico ico-cart"></i>
+            <span>Add to cart</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="light-box">
+    <div class="gallery flex-col mx-auto my-auto">
+      <div class="absolute z-20 top-0 right-1">
+        <button onclick="toggleClass('.light-box', 'active')" class="ico ico-close text-gray-300 hover:text-primary h-9 w-9 z-50"></button>
+      </div>
+      <button class="gallery-button left" data-direction="-1">
+        <i class="ico ico-previous"></i>
+      </button>
+      <div class="main bg-black">
+        <img src="img/image-product-1.jpg" alt="" id="main-image" data-index="0" class="object-cover">
+      </div>
+      <button class="gallery-button right" data-direction="1">
+        <i class="ico ico-next"></i>
+      </button>
+      <div class="caurosel-container">
+        <div class="caurosel flex mt-8"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution w-full mt-auto py-2 border-t-gray-200 border-t ">
+    <div class="font-bold font-sans text-gray-500 w-full text-center">
+      Challenge by <a class="text-gray-800" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br/>
+      Coded by <a class="text-gray-800" href="#">AstralDev</a>.
+    </div>
+  </div>
+
+  <script src="./lib/anime.min.js"></script>
+  <script src="./js/events.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/icons.js"></script>
+  <script src="./js/product-images.js"></script>
+</body>
+
+</html>

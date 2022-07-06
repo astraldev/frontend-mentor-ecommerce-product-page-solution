@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --vark-blue: hsl(220, 13%, 13%);
+    --greyish-blue: hsl(220, 14%, 75%);
+    --light-greyish-blue: hsl(223, 64%, 98%);
+    --box-black: rgba(0 0 0 / .75);
+    --transition-delay: 300ms;
+}
+
