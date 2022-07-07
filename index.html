@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 
-<body class="lg:px-24 flex flex-col">
+<body class="lg:px-24 pt-1 flex flex-col">
   <nav class="mx-2 md:pt-2 lg:pt-4 border-b relative px-2 items-center flex">
     <!-- The main navigation div -->
     <div class="flex">
       <button class="w-8 h-8 mr-2 grid place-items-center ico ico-menu my-auto md:hidden" onclick="toggleNav();removeClass('#cart', 'active')">
       </button>
-      <h1 class="text-3xl text-gray-700 font-bold md:pt-2.5 lg:text-4xl md:pb-0 mr-7 py-4">
+      <h1 class="text-2xl text-black font-bold md:pt-2.5 md:pb-0 mr-7 py-4">
         sneakers
       </h1>
       <div class="nav-list">
@@ -50,7 +50,7 @@
       </div>
     </div>
   </nav>
-  <div class="content lg:px-10 lg:py-16">
+  <div class="content lg:px-14 lg:py-20">
     <div class="gallery">
       <div class="main bg-black">
         <button class="gallery-button left" data-direction="-1">
@@ -61,14 +61,14 @@
           <i class="ico ico-next"></i>
         </button>
       </div>
-      <div class="caurosel-container">
+      <div class="caurosel-container no-scrollbar">
         <div class="caurosel flex mt-8"></div>
       </div>
     </div>
     <div class="description">
-      <h5 class="font-bold uppercase lg:text-lg">Sneaker Company</h5>
-      <h1 class="font-bold capitalize mt-4 text-4xl lg:text-5xl" id="prod-name">Fall Limited Edition Sneakers</h1>
-      <div class="py-4 text-gray-600 font-sans mr-4">
+      <span class="font-bold uppercase lg:text-lg">Sneaker Company</span>
+      <h1 class="font-bold capitalize mt-4 text-3xl lg:text-4xl" id="prod-name">Fall Limited Edition Sneakers</h1>
+      <div class="py-8 text-gray-600 font-sans mr-4">
         These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they'll withstand everything the weather can offer.
       </div>
@@ -115,7 +115,7 @@
       <button class="gallery-button right" data-direction="1">
         <i class="ico ico-next"></i>
       </button>
-      <div class="caurosel-container">
+      <div class="caurosel-container no-scrollbar">
         <div class="caurosel flex mt-8"></div>
       </div>
     </div>

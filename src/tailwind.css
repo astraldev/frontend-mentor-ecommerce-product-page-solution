@@ -78,9 +78,9 @@ span.cart-items-amount {
 
 .nav-list-item{
     /* Smaller Screens */
-    @apply py-3 font-bold font-sans relative ml-3 justify-start mx-1 px-3 grid place-items-stretch text-gray-700 w-full ;
+    @apply py-3 font-bold font-sans relative ml-4 justify-start mx-1 px-3 grid place-items-stretch text-gray-700 w-full ;
     /* Large Screens */
-    @apply md:w-auto md:py-5 md:pb-8 md:place-items-center md:text-gray-400 ;
+    @apply md:w-auto md:py-4 md:text-sm md:pb-9 md:px-3 md:font-normal md:place-items-center md:text-gray-400 ;
 }
 
 .nav-list-item::after{
@@ -195,7 +195,7 @@ div#thumbnail.active::after{
 .content > .description {
     @apply pt-2 p-5 md:px-4 md:py-5 md:ml-auto;
 }
-.description > h5{
+.description > span{
     color: var(--orange);
 }
 .discount { 

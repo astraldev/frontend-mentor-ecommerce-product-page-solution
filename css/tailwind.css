@@ -719,6 +719,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -727,6 +732,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .pb-3 {
@@ -749,9 +758,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -759,14 +768,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -781,9 +790,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: capitalize;
 }
 
-.text-gray-700 {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -974,6 +983,7 @@ span.cart-items-amount {
 
 .nav-list {
   /* Small Screens */
+  /* Larger Screens */
   position: fixed;
   left: 0px;
   z-index: 30;
@@ -989,18 +999,6 @@ span.cart-items-amount {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: rgb(0 0 0 / 0.3);
   --tw-shadow: var(--tw-shadow-colored);
-}
-
-@media (min-width: 768px) {
-  .nav-list {
-    --tw-shadow: 0 0 #0000;
-    --tw-shadow-colored: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-}
-
-.nav-list {
-  /* Larger Screens */
 }
 
 @media (min-width: 768px) {
@@ -1038,6 +1036,12 @@ span.cart-items-amount {
   .nav-list {
     align-items: center;
   }
+
+  .nav-list {
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 }
 
 .nav-list.active {
@@ -1067,9 +1071,10 @@ span.cart-items-amount {
 
 .nav-list-item{
   /* Smaller Screens */
+  /* Large Screens */
   position: relative;
   margin-right: 0.25rem;
-  margin-left: 0.75rem;
+  margin-left: 1rem;
   display: grid;
   width: 100%;
   place-items: stretch;
@@ -1082,7 +1087,6 @@ span.cart-items-amount {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-  /* Large Screens */
 }
 
 @media (min-width: 768px) {
@@ -1095,12 +1099,26 @@ span.cart-items-amount {
   }
 
   .nav-list-item {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .nav-list-item {
-    padding-bottom: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .nav-list-item {
+    padding-bottom: 2.25rem;
+  }
+
+  .nav-list-item {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .nav-list-item {
+    font-weight: 400;
   }
 
   .nav-list-item {
@@ -1439,7 +1457,7 @@ div#thumbnail.active::after{
   }
 }
 
-.description > h5{
+.description > span{
   color: var(--orange);
 }
 
@@ -1592,6 +1610,10 @@ button.add-to-cart:hover::after {
   .md\:pb-0 {
     padding-bottom: 0px;
   }
+
+  .md\:pb-2 {
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1600,23 +1622,18 @@ button.add-to-cart:hover::after {
     padding-right: 6rem;
   }
 
-  .lg\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .lg\:px-14 {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
-  .lg\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pt-4 {
     padding-top: 1rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .lg\:text-lg {
@@ -1637,5 +1654,10 @@ button.add-to-cart:hover::after {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

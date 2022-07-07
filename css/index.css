@@ -15,6 +15,19 @@ body {
     --greyish-blue: hsl(220, 14%, 75%);
     --light-greyish-blue: hsl(223, 64%, 98%);
     --box-black: rgba(0 0 0 / .75);
-    --transition-delay: 300ms;
+    --transition-delay: 250ms;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: thin;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { 
+    height: 4px !important;  /* Safari and Chrome */
+
+}
